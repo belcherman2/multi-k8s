@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: frlenihan-com-tls
+spec:
+  secretName: frlenihan-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: frlenihan.com
+  dnsNames:
+    - frlenihan.com
+    - www.frlenihan.com
+
